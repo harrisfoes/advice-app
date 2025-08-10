@@ -1,4 +1,5 @@
 import "./App.css";
+import quoteImg from "./assets/pattern-divider-mobile.svg";
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
               up and taking action."
             </p> 
             <div className="flex justify-center">
-            <img className="mt-10" src="src/assets/pattern-divider-mobile.svg" />
+            <img className="mt-10" src={quoteImg} />
             </div>
           </div>
         </div>

@@ -6,7 +6,7 @@ This will soon be my small projects application
         [x] custom colors
         [x] font
     [x] setup custom templates
-    [ ] set up on github
+    [x] set up on github
     [ ] set up functionality
         [ ] find api
         [ ] api hooking
