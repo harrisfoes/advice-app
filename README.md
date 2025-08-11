@@ -1,7 +1,7 @@
 This will soon be my small projects application
 
 [ ] finish the advice application
-    [x] figure out mobile layout
+     [x] figure out mobile layout
         [x] positionining
         [x] custom colors
         [x] font
@@ -15,3 +15,8 @@ This will soon be my small projects application
 [ ] refactor so that it can allow routing of other react things
 
 
+
+
+the thing deploys at:
+
+https://harrisfoes.github.io/advice-app/
