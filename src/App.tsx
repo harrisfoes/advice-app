@@ -19,6 +19,11 @@ function App() {
     });
   };
 
+  const adviceOnclick = () => {
+    setAdvice(null);
+    fetchAdvice();
+  };
+
   useEffect(() => {
     fetchAdvice();
   }, []);
@@ -28,18 +33,10 @@ function App() {
       <div className="min-h-dvh bg-blue-950 text-gray-300">
         <div className="flex justify-center justify-items-center">
           <div className="quote-container relative mt-50 flex-col max-w-lg mx-5 p-10 text-center bg-blue-900 rounded-lg">
-            {advice != null ? (
-              <>
                 <p className="text-l my-5 text-green-300 font-medium">
-                  ADVICE #{advice.id}
+                  {advice ? `ADVICE # ${advice.id}` : ""}
                 </p>
-                <p className="text-xl my-8 font-extrabold">{advice.advice}</p>
-              </>
-            ) : (
-              <>
-                <p>Advice loading...</p>
-              </>
-            )}
+                <p className="text-xl my-8 font-extrabold text-gray-300 min-w-[255px] min-h-[50px]">{advice ? advice.advice : <span className="opacity-50">Fetching advice</span>}</p>
             <div className="flex justify-center my-5">
               <img src={quoteImg} />
             </div>
@@ -47,7 +44,7 @@ function App() {
               className="filter absolute -bottom-8 left-1/2 -translate-x-1/2  
               p-4 rounded-full bg-green-500 transition ease-in-out duration-200 
               hover:brightness-125 hover:drop-shadow-lg active:hue-rotate-90 active:scale-110"
-              onClick={() => fetchAdvice()}
+              onClick={() => adviceOnclick()}
             >
               <img src={adviceDice} />
             </button>
